@@ -22,7 +22,7 @@ in
 
        startup = [{ command = "mpd"; }
                   # { command = "foot --server"; }
-                  { command = "/home/sam/.swayrc"; }
+                  { command = "~/.swayrc"; }
                  ];
 
        bars = [{ command = "none"; }];
