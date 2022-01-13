@@ -10,9 +10,9 @@ NixOS with tmpfs (Sway WM)
 <img src="/home/.config/win.png" width="100%" />
 
 <p align="center">
-<span><img src="/../screenshots/alucard/desktop.png" height="178" /></span>
-<span><img src="/../screenshots/alucard/rofi.png" height="178" /></span>
-<span><img src="/../screenshots/alucard/tiling.png" height="178" /></span>
+<span><img src="/home/.config/ide.png" height="178" /></span>
+<span><img src="/home/.config/menu.png" height="178" /></span>
+<span><img src="/home/.config/eww.png" height="178" /></span>
 </p>
 
 ------
