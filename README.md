@@ -128,10 +128,10 @@ Usage: znx [flags]
  I use tmpfs for /home as mentioned [here](https://elis.nu/blog/2020/06/nixos-tmpfs-as-home/) 
 by creating /home/sam under /nix/persist and giving the user to read and write that directory
 
-[nixos tmpfs /home]: https://elis.nu/blog/2020/06/nixos-tmpfs-as-home/
-[nixos tmpfs as root]: https://elis.nu/blog/2020/05/nixos-tmpfs-as-root/
-[nixos]: https://releases.nixos.org/?prefix=nixos/unstable/
-[agenix]: https://github.com/ryantm/agenix
-[hlissner dotfiles]: https://github.com/hlissner/dotfiles
-[home-manager]: https://github.com/nix-community/home-manager
-[flakes]: https://nixos.wiki/wiki/Flakes
++ [nixos tmpfs /home](https://elis.nu/blog/2020/06/nixos-tmpfs-as-home/)
++ [nixos tmpfs as root](https://elis.nu/blog/2020/05/nixos-tmpfs-as-root/)
++ [nixos](https://releases.nixos.org/?prefix=nixos/unstable/)
++ [agenix](https://github.com/ryantm/agenix)
++ [hlissner dotfiles](https://github.com/hlissner/dotfiles)
++ [home-manager](https://github.com/nix-community/home-manager)
++ [flakes](https://nixos.wiki/wiki/Flakes)
