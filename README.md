@@ -147,3 +147,4 @@ by creating /home/sam under /nix/persist and giving the user read-write permissi
 + [hlissner dotfiles](https://github.com/hlissner/dotfiles)
 + [home-manager](https://github.com/nix-community/home-manager)
 + [flakes](https://nixos.wiki/wiki/Flakes)
++ [eww config modified from](https://github.com/johnsci911/eww.widgets)
