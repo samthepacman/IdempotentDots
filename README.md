@@ -151,3 +151,10 @@ by creating /home/sam under /nix/persist and giving the user read-write permissi
 
 
 **PS** neovim config doesn't work properly but will be fixed soon
+
+-----
+
+# NOW TO THE DESKTOP PART
+- ~/.swayrc is the autostart script
+- it also contain the theme to waybar from [here](https://github.com/Sam1431/IdempotentDots/tree/main/etc/nixos/home/modes)
+- ~/.config/nvim , ~/.config/eww ~/.swayrc ~/any-dir-to-store-ur-files-and-wall need to persistent for config to work
