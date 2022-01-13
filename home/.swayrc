@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+pkill waybar
+pkill swaybg
+
+export MODE=custom
+/etc/nixos/home/modes/$MODE/activate &
+
+# AUTOSTART
+mako &
+eww daemon &
+swaybg -m fill -i ~/PERSISTENT/Wall/japan.jpg &
+sleep 6 ; cmst -m -i Papirus-Dark &
