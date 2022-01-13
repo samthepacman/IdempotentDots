@@ -93,10 +93,8 @@ mount -o bind /mnt/nix/persist/var/log /mnt/var/log
 6. cofigure your host under /mnt/etc/nixos/hosts with config you obtained from **step 4** ( for a tmpfs layout check [this](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/modules/system/hardware.nix) out ). Also require the host file from [config.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config.nix)
 
 8. make flakes available to nixos - ` nix-shell -p git nixFlakes ranger neovim`
-   
-   # Install nixOS
-    `# nixos-install --no-root-passwd --flake /mnt/etc/nixos`
-** NOTE **
+
+**NOTE**
 
 - the machine won't remember your password after reboot if you use 'passwd'
 - rather 
@@ -105,6 +103,10 @@ mount -o bind /mnt/nix/persist/var/log /mnt/var/log
      # $ nix-shell --run 'mkpasswd -m SHA-512 -s' -p mkpasswd
      users.users.root.initialHashedPassword = "the has you got from the above command";
 ```
+
+   #### Install nixOS
+    `# nixos-install --no-root-passwd --flake /mnt/etc/nixos`
+
 also shown [here](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/users/sam.nix)
 
 9. Then reboot
