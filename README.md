@@ -7,7 +7,7 @@ NixOS with tmpfs (Sway WM)
 > no guarantees that it will work out of the box for anyone but myself. It may
 > also change drastically and without warning. 
 
-<img src="/../screenshots/alucard/fakebusy.png" width="100%" />
+<img src="/home/.config/win.png" width="100%" />
 
 <p align="center">
 <span><img src="/../screenshots/alucard/desktop.png" height="178" /></span>
