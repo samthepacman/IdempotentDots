@@ -126,7 +126,7 @@ Usage: znx [flags]
  because I have something similar to a [OCD for perfection](https://www.treatmyocd.com/blog/just-right-perfectionism-ocd) and I want my system to be as clean as possible
   
  I use tmpfs for /home as mentioned [here](https://elis.nu/blog/2020/06/nixos-tmpfs-as-home/) 
-by creating /home/sam under /nix/persist and giving the user to read and write that directory
+by creating /home/sam under /nix/persist and giving the user read-write permission to that directory
 
 + [nixos tmpfs /home](https://elis.nu/blog/2020/06/nixos-tmpfs-as-home/)
 + [nixos tmpfs as root](https://elis.nu/blog/2020/05/nixos-tmpfs-as-root/)
