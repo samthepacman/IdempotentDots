@@ -96,6 +96,16 @@ mount -o bind /mnt/nix/persist/var/log /mnt/var/log
    
    # Install nixOS
     `# nixos-install --no-root-passwd --flake /mnt/etc/nixos`
+** NOTE **
+
+- the machine won't remember your password after reboot if you use 'passwd'
+- rather 
+``` config 
+     users.mutableUsers = false;
+     # $ nix-shell --run 'mkpasswd -m SHA-512 -s' -p mkpasswd
+     users.users.root.initialHashedPassword = "the has you got from the above command";
+```
+also shown [here](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/users/sam.nix)
 
 9. Then reboot
 
