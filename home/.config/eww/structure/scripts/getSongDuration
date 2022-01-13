@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# mpc status | grep "%)" | awk '{ print $4 }' | awk -F% '{ print $1 }' | awk 'sub(/^.{1}/,"")'
+playerctl metadata --format "Total length: {{ duration(mpris:length) }}"
+

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# wallpapers menu
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+source "$SCRIPT_DIR/config"
+
+declare options=("Fill
+Scale
+Tile")
+
+choice=$(echo -e "${options[@]}" | ${DMENU} -i -p ' Style: ')
+
+case "$choice" in
+Fill)
+    choice="$HOME/.hlwm-utils/menu/wall-menu/fill"
+    ;;
+Scale)
+    choice="$HOME/.hlwm-utils/menu/wall-menu/scale"
+    ;;
+Tile)
+    choice="$HOME/.hlwm-utils/menu/wall-menu/tile"
+    ;;
+esac
+sh $choice

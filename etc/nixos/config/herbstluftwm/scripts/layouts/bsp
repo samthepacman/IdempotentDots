@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# dwindle layout
+
+herbstclient chain \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . split right \
+    . focus right \
+    . split bottom \
+    . focus down \
+    . split right \
+    . focus right \
+    . split bottom \
+    . focus down \
+    . focus left \
+    . focus left

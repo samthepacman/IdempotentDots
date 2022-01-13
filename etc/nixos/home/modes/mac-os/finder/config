@@ -1,0 +1,81 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 28, // Waybar height (to be removed for auto height)
+    "width": 1340, // Waybar wid
+    // Choose the order of the modules
+    "modules-left" : ["custom/activities", "sway/workspaces"],
+    "modules-center": [""],
+    "modules-right" : ["pulseaudio", "network", "clock"],
+     "sway/workspaces": {
+       "all-outputs": true,
+       "format": " {icon} ",
+       "persistent_workspaces": {
+               "1": [],
+               "2": [],
+               "3": [],
+               "4": [],
+               "5": [],
+             //  "6": [],
+             //  "7": [],
+             //  "8": [],
+             //  "9": [],
+             },      "disable-scroll": false,
+         "format-icons": {
+	     "1": "Term",
+	     "2": "Files",
+	     "3": "Web",
+	     "4": "Music",
+	     "5": "Devel",
+             "6": "六",
+             "7": "七",
+             "8": "八",
+             "9": "九",
+             "urgent": " ",
+             "focused": " ",
+             "default": " "
+         } 
+     },
+    "custom/activities": {
+           "format": " ",
+           "interval": 1,
+           "tooltip": false,
+           "on-click": "kitty --class=launcher -e ~/.config/nixpkgs/machine/bin/launch"
+    },
+    "custom/time": {
+           "format": " ",
+           "interval": 1,
+           "on-click-right": "mpc toggle",
+           "tooltip": false,
+           "on-click": "foot"
+
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "   {:%b %d - %H:%M}",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "   {signalStrength}",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}    ",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+}

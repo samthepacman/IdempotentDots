@@ -1,0 +1,93 @@
+
+# MENU
+super + Return
+	 dmenu_run -p "Choose ::" -h 32 -nb "#16161c" -sb "#282c34" -sf "#61afef" -nf "#ffffff" -fn "Iosevka:style=Light:pixelsize=14"
+
+# TERM
+super + shift + Return
+	alacritty
+
+
+
+# KEY-RELOAD
+super + shift + Escape
+	pkill -USR1 -x sxhkd
+
+
+
+# WM-RELOAD
+super + shift + r
+        bspc wm -r
+
+
+
+# KILL 
+super + q
+	bspc node -c
+
+
+super + b
+	bspc node -p east
+
+super + v
+	bspc node -p south
+
+# WIN-STATE
+super + {t,shift + t,shift + space,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+
+
+# FOCUS-DIRECT
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+
+
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+
+
+# FOCUS-CYCLE
+super + {_,shift + }Tab
+	bspc node -f {next,prev}.local
+
+
+
+# SEND/FOCUS DESK
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+
+# WIN-RESIZE
+super + ctrl + {h,j,k,l}
+  ~/.config/bspwm/scripts/resize.sh {left,down,up,right} 30
+
+
+
+super + alt + {Left,Down,Up,Right}
+  ~/.config/bspwm/scripts/resize.sh {left,down,up,right} 30
+
+
+
+# PRESELECT-DIRECT
+super + ctrl + shift + {Left,Down,Up,Right}
+	bspc node -p {west,south,north,east}
+
+
+
+# PRESELECT-RATIO
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+
+
+# PRESELECT-CANCEL
+super + ctrl + space
+	bspc node -p cancel
+
+
+
+

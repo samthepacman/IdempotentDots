@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+echo $(printf %.$4f $(free -m | grep Mem | awk '{print ($3/$2)*100}'))

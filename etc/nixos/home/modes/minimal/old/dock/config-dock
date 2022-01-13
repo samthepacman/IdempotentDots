@@ -1,0 +1,58 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 48, // Waybar height (to be removed for auto height)
+    "width": 1340, // Waybar wid
+    // Choose the order of the modules
+    "modules-center": ["custom/dash", "custom/music", "custom/mail", "custom/firefox", "custom/terminal", "custom/fileman", "custom/matrix"],
+    "custom/firefox": {
+           "format": " ",
+           "interval": 1,
+           "tooltip": false,
+           "on-click-right": "mpc toggle",
+           "on-click": "firefox"
+
+    },
+    "custom/terminal": {
+           "format": " ",
+           "interval": 1,
+           "tooltip": false,
+           "on-click": "foot"
+
+    },
+    "custom/fileman": {
+           "format": " ",
+           "tooltip": false,
+           "interval": 1,
+           "on-click": "foot --app-id=file ranger",
+
+    },
+    "custom/music": {
+           "format": " ",
+           "interval": 1,
+           "tooltip": false,
+           "on-click": "foot --app-id=file ncmpcpp",
+
+    },
+    "custom/mail": {
+           "format": " ",
+           "interval": 1,
+           "tooltip": false,
+           "on-click": "geary",
+
+    },
+    "custom/dash": {
+           "format": " ",
+           "interval": 1,
+           "tooltip": false,
+           "on-click": "wofi --show drun",
+
+    },
+    "custom/matrix": {
+           "format": " ",
+           "interval": 1,
+           "tooltip": false,
+           "on-click": "element-desktop",
+
+    }
+}

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# frames control menu
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+source "$SCRIPT_DIR/config"
+
+declare options=("enable
+disable")
+
+choice=$(echo -e "${options[@]}" | ${DMENU} -i -p ' Main menu: ')
+
+case "$choice" in
+enable)
+	choice="$HOME/.hlwm-utils/menu/frames/enable"
+	;;
+disable)
+	choice="$HOME/.hlwm-utils/menu/frames/disable"
+	;;
+esac
+sh $choice

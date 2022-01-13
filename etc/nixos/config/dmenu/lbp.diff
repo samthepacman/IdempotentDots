@@ -1,0 +1,25 @@
+From 98e63311c4816fb3c7f5c5d00232fec3232465f3 Mon Sep 17 00:00:00 2001
+From: Sebastian LaVine <mail@smlavine.com>
+Date: Sat, 3 Jul 2021 17:35:50 -0400
+Subject: [PATCH] Draw lines immediately below prompt
+
+---
+ dmenu.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/dmenu.c b/dmenu.c
+index 65f25ce..5a041a6 100644
+--- a/dmenu.c
++++ b/dmenu.c
+@@ -154,7 +154,7 @@ drawmenu(void)
+ 	if (lines > 0) {
+ 		/* draw vertical list */
+ 		for (item = curr; item != next; item = item->right)
+-			drawitem(item, x, y += bh, mw - x);
++			drawitem(item, x - promptw, y += bh, mw - x);
+ 	} else if (matches) {
+ 		/* draw horizontal list */
+ 		x += inputw;
+-- 
+2.32.0
+

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+DMENU="dmenu"
+WALLPAPERS_DIR="${HOME}/Pictures/Wallpapers"

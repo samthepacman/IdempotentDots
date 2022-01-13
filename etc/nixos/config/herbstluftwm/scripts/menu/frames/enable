@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# enable frames
+
+herbstclient chain \
+    . set frame_border_width 3 \
+    . set always_show_frame true

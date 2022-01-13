@@ -1,0 +1,134 @@
+From 74a98d9600c50d50b9323cf8e459c88eb15da557 Mon Sep 17 00:00:00 2001
+From: efe <efe@efe.kim>
+Date: Sat, 9 Feb 2019 13:16:51 -0500
+Subject: [PATCH] Modal behaviour, 'i' to insert 'Esc' to get to the normal
+ mode
+
+---
+ config.def.h | 53 +++++++++++++++++++++++++++-------------------------
+ surf.c       | 14 +++++++++++++-
+ 2 files changed, 41 insertions(+), 26 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 34265f6..8b7d5a2 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -130,41 +130,44 @@ static SiteSpecific certs[] = {
+  */
+ static Key keys[] = {
+ 	/* modifier              keyval          function    arg */
+-	{ MODKEY,                GDK_KEY_g,      spawn,      SETPROP("_SURF_URI", "_SURF_GO", PROMPT_GO) },
+-	{ MODKEY,                GDK_KEY_f,      spawn,      SETPROP("_SURF_FIND", "_SURF_FIND", PROMPT_FIND) },
+-	{ MODKEY,                GDK_KEY_slash,  spawn,      SETPROP("_SURF_FIND", "_SURF_FIND", PROMPT_FIND) },
++	{ 0,                     GDK_KEY_g,      spawn,      SETPROP("_SURF_URI", "_SURF_GO", PROMPT_GO) },
++	{ 0,                     GDK_KEY_f,      spawn,      SETPROP("_SURF_FIND", "_SURF_FIND", PROMPT_FIND) },
++	{ 0,                     GDK_KEY_slash,  spawn,      SETPROP("_SURF_FIND", "_SURF_FIND", PROMPT_FIND) },
+ 
+-	{ 0,                     GDK_KEY_Escape, stop,       { 0 } },
+-	{ MODKEY,                GDK_KEY_c,      stop,       { 0 } },
++	{ 0,                     GDK_KEY_i,      insert,     { .i = 1 } },
++	{ 0,                     GDK_KEY_Escape, insert,     { .i = 0 } },
+ 
+-	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_r,      reload,     { .i = 1 } },
+-	{ MODKEY,                GDK_KEY_r,      reload,     { .i = 0 } },
++	{ 0,                     GDK_KEY_c,      stop,       { 0 } },
+ 
+-	{ MODKEY,                GDK_KEY_l,      navigate,   { .i = +1 } },
+-	{ MODKEY,                GDK_KEY_h,      navigate,   { .i = -1 } },
++	{ MODKEY,                GDK_KEY_r,      reload,     { .i = 1 } },
++	{ 0,                     GDK_KEY_r,      reload,     { .i = 0 } },
++
++	{ 0,                     GDK_KEY_l,      navigate,   { .i = +1 } },
++	{ 0,                     GDK_KEY_h,      navigate,   { .i = -1 } },
+ 
+ 	/* vertical and horizontal scrolling, in viewport percentage */
+-	{ MODKEY,                GDK_KEY_j,      scrollv,    { .i = +10 } },
+-	{ MODKEY,                GDK_KEY_k,      scrollv,    { .i = -10 } },
+-	{ MODKEY,                GDK_KEY_space,  scrollv,    { .i = +50 } },
+-	{ MODKEY,                GDK_KEY_b,      scrollv,    { .i = -50 } },
+-	{ MODKEY,                GDK_KEY_i,      scrollh,    { .i = +10 } },
+-	{ MODKEY,                GDK_KEY_u,      scrollh,    { .i = -10 } },
++	{ 0,                     GDK_KEY_j,      scrollv,    { .i = +10 } },
++	{ 0,                     GDK_KEY_k,      scrollv,    { .i = -10 } },
++	{ 0,                     GDK_KEY_space,  scrollv,    { .i = +50 } },
++	{ 0,                     GDK_KEY_b,      scrollv,    { .i = -50 } },
++	{ 0,                     GDK_KEY_i,      scrollh,    { .i = +10 } },
++	{ 0,                     GDK_KEY_u,      scrollh,    { .i = -10 } },
+ 
+ 
+-	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_j,      zoom,       { .i = -1 } },
+-	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_k,      zoom,       { .i = +1 } },
+-	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_q,      zoom,       { .i = 0  } },
+-	{ MODKEY,                GDK_KEY_minus,  zoom,       { .i = -1 } },
+-	{ MODKEY,                GDK_KEY_plus,   zoom,       { .i = +1 } },
++	{ 0|GDK_SHIFT_MASK,      GDK_KEY_j,      zoom,       { .i = -1 } },
++	{ 0|GDK_SHIFT_MASK,      GDK_KEY_k,      zoom,       { .i = +1 } },
++	{ 0|GDK_SHIFT_MASK,      GDK_KEY_q,      zoom,       { .i = 0  } },
++	{ 0,                     GDK_KEY_minus,  zoom,       { .i = -1 } },
++	{ 0|GDK_SHIFT_MASK,      GDK_KEY_plus,   zoom,       { .i = +1 } },
++	{ 0,                     GDK_KEY_equal,  zoom,       { .i = 0  } },
+ 
+-	{ MODKEY,                GDK_KEY_p,      clipboard,  { .i = 1 } },
+-	{ MODKEY,                GDK_KEY_y,      clipboard,  { .i = 0 } },
++	{ 0,                     GDK_KEY_p,      clipboard,  { .i = 1 } },
++	{ 0,                     GDK_KEY_y,      clipboard,  { .i = 0 } },
+ 
+-	{ MODKEY,                GDK_KEY_n,      find,       { .i = +1 } },
+-	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_n,      find,       { .i = -1 } },
++	{ 0,                     GDK_KEY_n,      find,       { .i = +1 } },
++	{ 0|GDK_SHIFT_MASK,      GDK_KEY_n,      find,       { .i = -1 } },
+ 
+-	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_p,      print,      { 0 } },
++	{ MODKEY,                GDK_KEY_p,      print,      { 0 } },
+ 	{ MODKEY,                GDK_KEY_t,      showcert,   { 0 } },
+ 
+ 	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_a,      togglecookiepolicy, { 0 } },
+diff --git a/surf.c b/surf.c
+index 2b54e3c..f4cbe68 100644
+--- a/surf.c
++++ b/surf.c
+@@ -175,6 +175,7 @@ static void spawn(Client *c, const Arg *a);
+ static void msgext(Client *c, char type, const Arg *a);
+ static void destroyclient(Client *c);
+ static void cleanup(void);
++static int insertmode = 0;
+ 
+ /* GTK/WebKit */
+ static WebKitWebView *newview(Client *c, WebKitWebView *rv);
+@@ -231,6 +232,7 @@ static void togglefullscreen(Client *c, const Arg *a);
+ static void togglecookiepolicy(Client *c, const Arg *a);
+ static void toggleinspector(Client *c, const Arg *a);
+ static void find(Client *c, const Arg *a);
++static void insert(Client *c, const Arg *a);
+ 
+ /* Buttons */
+ static void clicknavigate(Client *c, const Arg *a, WebKitHitTestResult *h);
+@@ -1333,7 +1335,11 @@ winevent(GtkWidget *w, GdkEvent *e, Client *c)
+ 		updatetitle(c);
+ 		break;
+ 	case GDK_KEY_PRESS:
+-		if (!curconfig[KioskMode].val.i) {
++		if (!curconfig[KioskMode].val.i &&
++		    !insertmode ||
++		    CLEANMASK(e->key.state) == (MODKEY|GDK_SHIFT_MASK) ||
++		    CLEANMASK(e->key.state) == (MODKEY) ||
++		    gdk_keyval_to_lower(e->key.keyval) == (GDK_KEY_Escape)) {
+ 			for (i = 0; i < LENGTH(keys); ++i) {
+ 				if (gdk_keyval_to_lower(e->key.keyval) ==
+ 				    keys[i].keyval &&
+@@ -1947,6 +1953,12 @@ find(Client *c, const Arg *a)
+ 	}
+ }
+ 
++void
++insert(Client *c, const Arg *a)
++{
++		insertmode = (a->i);
++}
++
+ void
+ clicknavigate(Client *c, const Arg *a, WebKitHitTestResult *h)
+ {
+-- 
+2.20.1
+

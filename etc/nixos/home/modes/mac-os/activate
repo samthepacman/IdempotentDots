@@ -1,0 +1,4 @@
+# swaybg -m fill -i /etc/nixos/config/home/modes/mac-os/mac.jpg &
+waybar -c /etc/nixos/config/home/modes/mac-os/dock/config-dock -s /etc/nixos/config/home/modes/mac-os/dock/style-dock.css &
+waybar -c /etc/nixos/config/home/modes/mac-os/finder/config -s /etc/nixos/config/home/modes/mac-os/finder/style.css &
+

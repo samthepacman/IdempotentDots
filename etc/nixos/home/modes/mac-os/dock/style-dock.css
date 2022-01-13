@@ -1,0 +1,70 @@
+* {
+    border: transparent;
+    /* border-radius: 0px;*/
+    font-family: Iosevka Nerd Font, Font Awesome, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    border: transparent;
+    color: #bbc2cf;
+}
+
+#custom-firefox,
+#custom-terminal,
+#custom-fileman,
+#custom-matrix,
+#custom-music,
+#custom-mail,
+#mpd {
+    padding: 0 10px;
+    margin: 0px 0px 0px 0px;
+    color: #1e2127;
+}
+
+#custom-firefox {
+    font-size: 20px;
+  /*  border-top: 1px solid #16191e; */
+    color: #51afef;
+    background-color: #282c34;
+}
+
+#custom-terminal {
+    font-size: 22px;
+    /* border-top: 1px solid #16191e; */
+    color: #e5c07b;
+    background-color: #282c34;
+}
+
+#custom-fileman {
+    font-size: 20px;
+    /* border-top: 1px solid #16191e; */
+    color: #c678dd;
+    background-color: #282c34;
+}
+
+#custom-matrix {
+    font-size: 20px;
+    border: 3px solid #282c34;
+    color: #5c6370;
+    border-radius: 0px 8px 0px 0px;
+    background-color: #282c34;
+}
+
+#custom-mail {
+    font-size: 20px;
+   /*  border-top: 1px solid #16191e; */
+    color: #e06c75;
+    background-color: #282c34;
+}
+
+#custom-music {
+    font-size: 20px;
+    border: 3px solid #282c34;
+    color: #98c379;
+    border-radius: 8px 0px 0px 0px;
+    background-color: #282c34;
+}

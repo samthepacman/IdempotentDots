@@ -1,0 +1,56 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "left", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    "width": 50, // Waybar wid
+    // Choose the order of the modules
+    "modules-right": ["custom/music", "custom/mail", "custom/firefox", "custom/terminal", "custom/fileman", "custom/menu"],
+    "custom/firefox": {
+           "format": " ",
+           "interval": 1,
+           "tooltip": false,
+           "on-click-right": "mpc toggle",
+           "on-click": "firefox"
+
+    },
+    "custom/terminal": {
+           "format": " ",
+           "interval": 1,
+           "on-click-right": "mpc toggle",
+           "tooltip": false,
+           "on-click": "foot"
+
+    },
+    "custom/fileman": {
+           "format": " ",
+           "tooltip": false,
+           "interval": 1,
+           "on-click-right": "mpc toggle",
+           "on-click": "foot --app-id=file ranger",
+
+    },
+    "custom/music": {
+           "format": " ",
+           "interval": 1,
+           "tooltip": false,
+           "on-click-right": "mpc toggle",
+           "on-click": "foot --app-id=file ncmpcpp",
+
+    },
+    "custom/mail": {
+           "format": " ",
+           "interval": 1,
+           "on-click-right": "mpc toggle",
+           "tooltip": false,
+           "on-click": "geary",
+
+    },
+    "custom/menu": {
+           "format": " ",
+           "interval": 1,
+           "on-click-right": "mpc toggle",
+           "tooltip": false,
+           "on-click": "kitty --class=launcher -e ~/.config/nixpkgs/machine/bin/launch",
+
+    }
+}

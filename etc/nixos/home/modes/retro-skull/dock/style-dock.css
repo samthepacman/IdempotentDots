@@ -1,0 +1,69 @@
+* {
+    border: transparent;
+    border-radius: 2px;
+    font-family: Iosevka Nerd Font, Font Awesome, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    border: transparent;
+    color: #bbc2cf;
+}
+
+#custom-firefox,
+#custom-terminal,
+#custom-fileman,
+#custom-matrix,
+#custom-dash,
+#custom-music,
+#custom-mail,
+#mpd {
+    padding: 0 10px;
+    margin: 6px 4px 6px 4px;
+    color: #1e2127;
+}
+
+#custom-firefox {
+    font-size: 20px;
+    color: #51afef;
+    background-color: rgba(0, 0, 0, 0.6);;
+}
+
+#custom-terminal {
+    font-size: 20px;
+    color: #e5c07b;
+    background-color: rgba(0, 0, 0, 0.6);;
+}
+
+#custom-fileman {
+    font-size: 20px;
+    color: #c678dd;
+    background-color: rgba(0, 0, 0, 0.6);;
+}
+
+#custom-matrix {
+    font-size: 20px;
+    color: #5c6370;
+    background-color: rgba(0, 0, 0, 0.6);;
+}
+
+#custom-mail {
+    font-size: 20px;
+    color: #e06c75;
+    background-color: rgba(0, 0, 0, 0.6);;
+}
+
+#custom-music {
+    font-size: 20px;
+    color: #98c379;
+    background-color: rgba(0, 0, 0, 0.6);;
+}
+
+#custom-dash {
+    font-size: 22px;
+    color: #829edd;
+    background-color: rgba(0, 0, 0, 0.6);;
+}

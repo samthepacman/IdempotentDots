@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# hlwm-utils main manu
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+source "$SCRIPT_DIR/config"
+
+declare options=("
+[]=  -------------- [ TALL / MASTERSTACK ]
+=[]= -------------- [ CENTEREDMASTER ]
+[\]  -------------- [ DWINDLE / BSPWM ]
+==   -------------- [ VERTICAL / COLUMN ]
+reset")
+
+choice=$(echo -e "${options[@]}" | ${DMENU} -h 28 -nb '#000000' -sb '#61afef' -sf '#000000' -nf '#ffffff' -i -p ' Select layput: ' -fn 'Iosevka:pixelsize=14' -l 6)
+
+case "$choice" in
+=[]=*)
+	choice="$HOME/.config/herbstulftwm/scripts/layouts/dwm"
+	;;
+[\]*)
+	choice="$HOME/.config/herbstulftwm/scripts/layouts/bsp"
+	;;
+[]=*)
+	choice="$HOME/.config/herbstulftwm/scripts/layouts/tall"
+	;;
+==*)
+	choice="$HOME/.config/herbstulftwm/scripts/layouts/vert"
+	;;
+~@*)
+	choice="$HOME/.config/herbstulftwm/scripts/layouts/reset"
+	;;
+esac
+sh $choice

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# centered-master layout
+
+herbstclient chain \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . split left 0.25 \
+    . focus right \
+    . split right 0.67 \
+    . focus right \
+    . split bottom \
+    . focus left \
+    . focus left \
+    . split bottom \
+    . focus right

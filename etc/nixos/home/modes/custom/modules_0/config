@@ -1,0 +1,163 @@
+{
+    // "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 36, // Waybar height (to be removed for auto height)
+    "width": 1340, // Waybar wid
+    // Choose the order of the modules
+    "modules-left": ["pulseaudio", "memory", "backlight", "idle_inhibitor", "sway/workspaces"],
+    //"modules-center": ["sway/window"],
+    "modules-right": [ "tray", "disk", "cpu", "network", "clock"],
+    // Modules configuration
+     "sway/workspaces": {
+       "all-outputs": true,
+       "format": " {name} ",
+       "persistent_workspaces": {
+               "1": [],
+               "2": [],
+               "3": [],
+               "4": [],
+               "5": [],
+               "6": [],
+               "7": [],
+               "8": [],
+               "9": [],
+             },      "disable-scroll": false,
+         "format-icons": {
+	     "1": "One",
+	     "2": "Two",
+	     "3": "Three",
+	     "4": "Four",
+	     "5": "Five",
+             "6": "Six",
+             "7": "Seven",
+             "8": "Eight",
+             "9": "Nine",
+             "urgent": " ",
+             "focused": " ",
+             "default": " "
+         } 
+     },
+    "sway/mode": {
+        "format": " {} "
+    },
+    "sway/window": {
+        "format": "{}"
+    },
+    "mpd": {
+        "format": "  {title} {stateIcon} ",
+        "format-disconnected": "Disconnected",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "playing": "",
+            "paused": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+	"format": "  {:%H:%M}",
+        "tooltip-format": "<big>  {:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "Date: {:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 1,
+        "tooltip": true
+    },
+    "memory": {
+        "format": "  {}%",
+	"interval": 1
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": [" ", " ", " "]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "disk": {
+        "path": "/nix/persist",
+	"format": "  {percentage_used}% used in Directory - {path}"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "直  {essid} ({signalStrength}%)",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "睊  Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "|   {volume}%",
+        "format-source-muted": "",
+        "format-icons": ["", "", " "],
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "playerctl " // Script in resources folder
+        // "exec": "${pkgs.playerctl}/bin/playerctl -a --follow metadata --format" // Filter player based on name
+    }
+}

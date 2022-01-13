@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# hlwm-utils main manu
+
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+source "$SCRIPT_DIR/config"
+
+declare options=("layouts
+frames-control
+wall-menu
+|
+EXIT")
+
+choice=$(echo -e "${options[@]}" | ${DMENU} -i -p ' hlwm-utils: ')
+
+case "$choice" in
+layouts)
+	choice="$HOME/.hlwm-utils/menu/layouts_menu"
+	;;
+frames-control)
+	choice="$HOME/.hlwm-utils/menu/frames_menu"
+	;;
+wall-menu)
+	choice="$HOME/.hlwm-utils/menu/wall_menu"
+	;;
+EXIT)
+	exit 1
+	;;
+esac
+sh $choice

@@ -1,0 +1,238 @@
+diff --git a/config.def.h b/config.def.h
+index 93a3d49..fa7935c 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -83,50 +83,51 @@ static SiteStyle styles[] = {
+  * edit the CLEANMASK() macro.
+  */
+ static Key keys[] = {
+-	/* modifier             keyval      function    arg             Focus */
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_r,      reload,     { .b = TRUE } },
+-	{ MODKEY,               GDK_r,      reload,     { .b = FALSE } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_p,      print,      { 0 } },
+-
+-	{ MODKEY,               GDK_p,      clipboard,  { .b = TRUE } },
+-	{ MODKEY,               GDK_y,      clipboard,  { .b = FALSE } },
+-
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_j,      zoom,       { .i = -1 } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_k,      zoom,       { .i = +1 } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_q,      zoom,       { .i = 0  } },
+-	{ MODKEY,               GDK_minus,  zoom,       { .i = -1 } },
+-	{ MODKEY,               GDK_plus,   zoom,       { .i = +1 } },
+-
+-	{ MODKEY,               GDK_l,      navigate,   { .i = +1 } },
+-	{ MODKEY,               GDK_h,      navigate,   { .i = -1 } },
+-
+-	{ MODKEY,               GDK_j,      scroll_v,   { .i = +1 } },
+-	{ MODKEY,               GDK_k,      scroll_v,   { .i = -1 } },
+-	{ MODKEY,               GDK_b,      scroll_v,   { .i = -10000 } },
+-	{ MODKEY,               GDK_space,  scroll_v,   { .i = +10000 } },
+-	{ MODKEY,               GDK_i,      scroll_h,   { .i = +1 } },
+-	{ MODKEY,               GDK_u,      scroll_h,   { .i = -1 } },
+-
+-	{ 0,                    GDK_F11,    fullscreen, { 0 } },
+-	{ 0,                    GDK_Escape, stop,       { 0 } },
+-	{ MODKEY,               GDK_o,      source,     { 0 } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_o,      inspector,  { 0 } },
+-
+-	{ MODKEY,               GDK_g,      spawn,      SETPROP("_SURF_URI", "_SURF_GO") },
+-	{ MODKEY,               GDK_f,      spawn,      SETPROP("_SURF_FIND", "_SURF_FIND") },
+-	{ MODKEY,               GDK_slash,  spawn,      SETPROP("_SURF_FIND", "_SURF_FIND") },
+-
+-	{ MODKEY,               GDK_n,      find,       { .b = TRUE } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_n,      find,       { .b = FALSE } },
+-
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_c,      toggle,     { .v = "enable-caret-browsing" } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_i,      toggle,     { .v = "auto-load-images" } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_s,      toggle,     { .v = "enable-scripts" } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_v,      toggle,     { .v = "enable-plugins" } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_a,      togglecookiepolicy, { 0 } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_m,      togglestyle, { 0 } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_b,      togglescrollbars, { 0 } },
+-	{ MODKEY|GDK_SHIFT_MASK,GDK_g,      togglegeolocation, { 0 } },
++	/* modifier             keyval          function    arg             Focus */
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_r,      reload,     { .b = TRUE } },
++	{ MODKEY,               GDK_KEY_r,      reload,     { .b = FALSE } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_p,      print,      { 0 } },
++
++	{ MODKEY,               GDK_KEY_p,      clipboard,  { .b = TRUE } },
++	{ MODKEY,               GDK_KEY_y,      clipboard,  { .b = FALSE } },
++
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_j,      zoom,       { .i = -1 } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_k,      zoom,       { .i = +1 } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_q,      zoom,       { .i = 0  } },
++	{ MODKEY,               GDK_KEY_minus,  zoom,       { .i = -1 } },
++	{ MODKEY,               GDK_KEY_plus,   zoom,       { .i = +1 } },
++
++	{ MODKEY,               GDK_KEY_l,      navigate,   { .i = +1 } },
++	{ MODKEY,               GDK_KEY_h,      navigate,   { .i = -1 } },
++
++	{ MODKEY,               GDK_KEY_j,      scroll_v,   { .i = +1 } },
++	{ MODKEY,               GDK_KEY_k,      scroll_v,   { .i = -1 } },
++	{ MODKEY,               GDK_KEY_b,      scroll_v,   { .i = -10000 } },
++	{ MODKEY,               GDK_KEY_space,  scroll_v,   { .i = +10000 } },
++	{ MODKEY,               GDK_KEY_i,      scroll_h,   { .i = +1 } },
++	{ MODKEY,               GDK_KEY_u,      scroll_h,   { .i = -1 } },
++
++	{ 0,                    GDK_KEY_F11,    fullscreen, { 0 } },
++	{ 0,                    GDK_KEY_Escape, stop,       { 0 } },
++	{ MODKEY,               GDK_KEY_o,      source,     { 0 } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_o,      inspector,  { 0 } },
++
++	{ MODKEY,               GDK_KEY_g,      spawn,      SETPROP("_SURF_URI", "_SURF_GO") },
++	{ MODKEY,               GDK_KEY_f,      spawn,      SETPROP("_SURF_FIND", "_SURF_FIND") },
++	{ MODKEY,               GDK_KEY_slash,  spawn,      SETPROP("_SURF_FIND", "_SURF_FIND") },
++
++	{ MODKEY,               GDK_KEY_n,      find,       { .b = TRUE } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_n,      find,       { .b = FALSE } },
++
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_c,      toggle,     { .v = "enable-caret-browsing" } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_i,      toggle,     { .v = "auto-load-images" } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_s,      toggle,     { .v = "enable-scripts" } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_v,      toggle,     { .v = "enable-plugins" } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_a,      togglecookiepolicy, { 0 } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_m,      togglestyle, { 0 } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_b,      togglescrollbars, { 0 } },
++	{ MODKEY|GDK_SHIFT_MASK,GDK_KEY_g,      togglegeolocation, { 0 } },
++
+ };
+ 
+ /* button definitions */
+diff --git a/config.mk b/config.mk
+index 9f85ea4..a070f88 100644
+--- a/config.mk
++++ b/config.mk
+@@ -10,8 +10,8 @@ MANPREFIX = ${PREFIX}/share/man
+ X11INC = /usr/X11R6/include
+ X11LIB = /usr/X11R6/lib
+ 
+-GTKINC = `pkg-config --cflags gtk+-2.0 webkit-1.0`
+-GTKLIB = `pkg-config --libs gtk+-2.0 webkit-1.0`
++GTKINC = `pkg-config --cflags gtk+-3.0 webkitgtk-3.0`
++GTKLIB = `pkg-config --libs gtk+-3.0 webkitgtk-3.0`
+ 
+ # includes and libs
+ INCS = -I. -I/usr/include -I${X11INC} ${GTKINC}
+diff --git a/surf.c b/surf.c
+index 108485b..7a708d4 100644
+--- a/surf.c
++++ b/surf.c
+@@ -6,6 +6,7 @@
+ #include <X11/X.h>
+ #include <X11/Xatom.h>
+ #include <gtk/gtk.h>
++#include <gtk/gtkx.h>
+ #include <gdk/gdkx.h>
+ #include <gdk/gdk.h>
+ #include <gdk/gdkkeysyms.h>
+@@ -100,7 +101,7 @@ typedef struct {
+ static Display *dpy;
+ static Atom atoms[AtomLast];
+ static Client *clients = NULL;
+-static GdkNativeWindow embed = 0;
++static Window embed = 0;
+ static gboolean showxid = FALSE;
+ static char winid[64];
+ static gboolean usingproxy = 0;
+@@ -627,9 +628,9 @@ getatom(Client *c, int a)
+ 	unsigned long ldummy;
+ 	unsigned char *p = NULL;
+ 
+-	XGetWindowProperty(dpy, GDK_WINDOW_XID(GTK_WIDGET(c->win)->window),
+-	                   atoms[a], 0L, BUFSIZ, False, XA_STRING,
+-	                   &adummy, &idummy, &ldummy, &ldummy, &p);
++	XGetWindowProperty(dpy, GDK_WINDOW_XID(gtk_widget_get_window(GTK_WIDGET(c->win))),
++			atoms[a], 0L, BUFSIZ, False, XA_STRING,
++			&adummy, &idummy, &ldummy, &ldummy, &p);
+ 	if (p)
+ 		strncpy(buf, (char *)p, LENGTH(buf)-1);
+ 	else
+@@ -873,6 +874,7 @@ newclient(void)
+ 	WebKitWebFrame *frame;
+ 	GdkGeometry hints = { 1, 1 };
+ 	GdkScreen *screen;
++	GdkWindow *window;
+ 	gdouble dpi;
+ 	char *ua;
+ 
+@@ -902,6 +904,10 @@ newclient(void)
+ 		 */
+ 		gtk_window_set_role(GTK_WINDOW(c->win), "Surf");
+ 	}
++
++	gtk_widget_realize(GTK_WIDGET(c->win));
++	window = gtk_widget_get_window(GTK_WIDGET(c->win));
++
+ 	gtk_window_set_default_size(GTK_WINDOW(c->win), 800, 600);
+ 	g_signal_connect(G_OBJECT(c->win),
+ 	                 "destroy",
+@@ -914,10 +920,10 @@ newclient(void)
+ 		addaccelgroup(c);
+ 
+ 	/* Pane */
+-	c->pane = gtk_vpaned_new();
++	c->pane = gtk_paned_new(GTK_ORIENTATION_VERTICAL);
+ 
+ 	/* VBox */
+-	c->vbox = gtk_vbox_new(FALSE, 0);
++	c->vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
+ 	gtk_paned_pack1(GTK_PANED(c->pane), c->vbox, TRUE, TRUE);
+ 
+ 	/* Webview */
+@@ -999,8 +1005,8 @@ newclient(void)
+ 	gtk_widget_show(c->win);
+ 	gtk_window_set_geometry_hints(GTK_WINDOW(c->win), NULL, &hints,
+ 	                              GDK_HINT_MIN_SIZE);
+-	gdk_window_set_events(GTK_WIDGET(c->win)->window, GDK_ALL_EVENTS_MASK);
+-	gdk_window_add_filter(GTK_WIDGET(c->win)->window, processx, c);
++	gdk_window_set_events(window, GDK_ALL_EVENTS_MASK);
++	gdk_window_add_filter(window, processx, c);
+ 	webkit_web_view_set_full_content_zoom(c->view, TRUE);
+ 
+ 	runscript(frame);
+@@ -1034,7 +1040,7 @@ newclient(void)
+ 	 * It is equivalent to firefox's "layout.css.devPixelsPerPx" setting.
+ 	 */
+ 	if (zoomto96dpi) {
+-		screen = gdk_window_get_screen(GTK_WIDGET(c->win)->window);
++		screen = gdk_window_get_screen(window);
+ 		dpi = gdk_screen_get_resolution(screen);
+ 		if (dpi != -1) {
+ 			g_object_set(G_OBJECT(settings),
+@@ -1073,7 +1079,7 @@ newclient(void)
+ 	if (showxid) {
+ 		gdk_display_sync(gtk_widget_get_display(c->win));
+ 		printf("%u\n",
+-		       (guint)GDK_WINDOW_XID(GTK_WIDGET(c->win)->window));
++		       (guint)GDK_WINDOW_XID(window));
+ 		fflush(NULL);
+ 		if (fclose(stdout) != 0)
+ 			die("Error closing stdout");
+@@ -1281,7 +1287,7 @@ void
+ setatom(Client *c, int a, const char *v)
+ {
+ 	XSync(dpy, False);
+-	XChangeProperty(dpy, GDK_WINDOW_XID(GTK_WIDGET(c->win)->window),
++	XChangeProperty(dpy, GDK_WINDOW_XID(gtk_widget_get_window(GTK_WIDGET(c->win))),
+ 	                atoms[a], XA_STRING, 8, PropModeReplace,
+ 	                (unsigned char *)v, strlen(v) + 1);
+ }
+@@ -1302,7 +1308,7 @@ setup(void)
+ 		die("Can't install SIGHUP handler");
+ 	gtk_init(NULL, NULL);
+ 
+-	dpy = GDK_DISPLAY();
++	dpy = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
+ 
+ 	/* atoms */
+ 	atoms[AtomFind] = XInternAtom(dpy, "_SURF_FIND", False);
+@@ -1634,7 +1640,7 @@ void
+ updatewinid(Client *c)
+ {
+ 	snprintf(winid, LENGTH(winid), "%u",
+-	         (int)GDK_WINDOW_XID(GTK_WIDGET(c->win)->window));
++	         (int)GDK_WINDOW_XID(gtk_widget_get_window(GTK_WIDGET(c->win))));
+ }
+ 
+ void
+

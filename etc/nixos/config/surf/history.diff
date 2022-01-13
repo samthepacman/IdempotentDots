@@ -1,0 +1,68 @@
+diff --git a/config.def.h b/config.def.h
+index b6ae4fc..74b1968 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -6,6 +6,8 @@ static char *styledir       = "~/.surf/styles/";
+ static char *certdir        = "~/.surf/certificates/";
+ static char *cachedir       = "~/.surf/cache/";
+ static char *cookiefile     = "~/.surf/cookies.txt";
++static char *historyfile    = "~/.surf/history.txt";
++
+ 
+ /* Webkit default features */
+ /* Highest priority value will be used.
+diff --git a/surf.c b/surf.c
+index e709f35..d7c2166 100644
+--- a/surf.c
++++ b/surf.c
+@@ -347,9 +347,10 @@ setup(void)
+ 	curconfig = defconfig;
+ 
+ 	/* dirs and files */
+-	cookiefile = buildfile(cookiefile);
+-	scriptfile = buildfile(scriptfile);
+-	certdir    = buildpath(certdir);
++	cookiefile  = buildfile(cookiefile);
++	historyfile = buildfile(historyfile);
++	scriptfile  = buildfile(scriptfile);
++	certdir     = buildpath(certdir);
+ 	if (curconfig[Ephemeral].val.i)
+ 		cachedir = NULL;
+ 	else
+@@ -589,6 +590,7 @@ loaduri(Client *c, const Arg *a)
+ 	} else {
+ 		webkit_web_view_load_uri(c->view, url);
+ 		updatetitle(c);
++		updatehistory(url);
+ 	}
+ 
+ 	g_free(url);
+@@ -659,6 +661,20 @@ updatetitle(Client *c)
+ 	}
+ }
+ 
++void
++updatehistory(const char *url)
++{
++	FILE *f;
++	f = fopen(historyfile, "a+");
++
++	char timestamp[20];
++	time_t now = time (0);
++	strftime (timestamp, 20, "%Y-%m-%dT%H:%M:%S", localtime (&now));
++
++	fprintf(f, "%s %s\n", timestamp, url);
++	fclose(f);
++}
++
+ void
+ gettogglestats(Client *c)
+ {
+@@ -1085,6 +1101,7 @@ cleanup(void)
+ 	close(spair[0]);
+ 	close(spair[1]);
+ 	g_free(cookiefile);
++	g_free(historyfile);
+ 	g_free(scriptfile);
+ 	g_free(stylefile);
+ 	g_free(cachedir);

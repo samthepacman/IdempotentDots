@@ -1,0 +1,8 @@
+#!/bin/bash
+silent="$(dunstctl is-paused)"
+if [[ $silent == "true" ]]; then
+echo "structure/icons/bell-off.png"
+
+else
+echo "structure/icons/bell-on.png"
+fi

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# master-stack layout
+
+herbstclient chain \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . split right 0.75 \
+    . focus right \
+    . split bottom 0.50 \
+    . split bottom 0.50 \
+    . focus down \
+    . focus down \
+    . split bottom 0.50 \
+    . focus left

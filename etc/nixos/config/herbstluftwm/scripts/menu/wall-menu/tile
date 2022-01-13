@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# style: tile
+
+cd ~/Wallpapers/tiled
+
+img=$(printf '%s\n' * | dmenu -p ' Tile: ')
+
+[ -f "$img" ] ; feh --bg-tile "$img" ; notify-send "Style: tile" ; notify-send "File: $img"

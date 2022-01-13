@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# disable frames
+
+herbstclient chain \
+    . set frame_border_width 0 \
+    . set always_show_frame false

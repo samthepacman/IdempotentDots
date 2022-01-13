@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# vertical layout
+
+herbstclient chain \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . split left 0.30 \
+    . focus right \
+    . split right 0.56 \
+    . focus left \
+    . focus right

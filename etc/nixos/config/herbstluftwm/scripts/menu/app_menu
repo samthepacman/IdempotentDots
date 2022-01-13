@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+dmenu_run -h 28 -nb '#000000' -sb '#61afef' -sf '#000000' -nf '#ffffff' -fn 'Iosevka:pixelsize=14' -l 10 -b

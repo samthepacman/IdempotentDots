@@ -1,0 +1,27 @@
+(defvar imgUser "structure/icons/user-avatar.png")
+
+(defpoll hour :interval "1s" `date +%I`)
+(defpoll minute :interval "1s" `date +%M`)
+(defpoll date :interval "1s" `date "+%A, %d %B"`)
+
+(defpoll audio :interval "1s" "structure/scripts/isMuted")
+(defpoll notifications :interval "1s" "structure/scripts/isSilent")
+(defpoll mic :interval "1s" "structure/scripts/isMic")
+(defvar settings-icon "structure/icons/settings.png")
+
+(defpoll ram :interval "1s" "structure/scripts/getRam")
+(defpoll vol :interval "1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defpoll cpu :interval "1s" "echo `top -b -n1 | grep \"Cpu(s)\" | awk '{print $2 + $4}'`")
+
+(defpoll distro :interval "12h" "awk '/^ID=/' /etc/*-release | awk -F'=' '{ print tolower($2) }'")
+(defpoll de :interval "12h" "echo $XDG_CURRENT_DESKTOP")
+(defpoll wm :interval "12h" "wmctrl -m | grep \"Name:\" | awk '{print $2}'")
+(defpoll shell :interval "5m" "echo $SHELL | awk -F'/' '{print $NF}'")
+(defpoll uptime :interval "30s" "uptime | awk '{print $1}'")
+(defpoll packages :interval "5m" "nix-env -q | wc -l")
+
+(defvar imgCover "structure/icons/fallback.png")
+(defpoll playpause :interval "1s" "structure/scripts/isPlaying")
+(defpoll song :interval "1s" "playerctl metadata --format '{{ (title) }}'")
+(defpoll artist :interval "1s" "playerctl metadata --format '{{ artist }}'")
+(defpoll songtime :interval "1s" "structure/scripts/getSongDuration")
