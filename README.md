@@ -42,7 +42,7 @@ NixOS with tmpfs (Sway WM)
 
 2. - Boot into the installer.
     - ## Setting up tmpfs
- 
+ - for legacy 
  ```
 # Defining a helper variable to make the following commands shorter.
 DISK=/dev/disk/by-id/ata-VENDOR-ID-OF-THE-DRIVE
@@ -57,6 +57,22 @@ parted $DISK -- set 1 boot on
 # Create a /nix as $DISK-part2
 parted $DISK -- mkpart primary ext4 512MiB 100%
 ```
+- for efi
+``
+# Defining a helper variable to make the following commands shorter.
+DISK=/dev/disk/by-id/ata-VENDOR-ID-OF-THE-DRIVE
+
+# Create partition table
+parted $DISK -- mklabel gpt
+
+# Create a /boot as $DISK-part1
+parted $DISK -- mkpart ESP fat32 1MiB 512MiB
+parted $DISK -- set 1 boot on
+
+# Create a /nix as $DISK-part2
+parted $DISK -- mkpart Nix 512MiB 100%
+``
+
 ### Step 2 - Creating the file systems
 ```
 # /boot partition for legacy boot
