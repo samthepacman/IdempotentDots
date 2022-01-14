@@ -28,9 +28,7 @@ NixOS with tmpfs (Sway WM)
 <span><img src="/home/.config/eww.png" height="178" /></span>
 </p>
 
-<p align="center">
-    [NVIM AND EWW CONFIG](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)
-</p>
+**[NVIM AND EWW CONFIG](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)**
 
 ------
 
