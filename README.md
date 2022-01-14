@@ -4,7 +4,9 @@
 <p align="center">
     <b> λ Idempotent Dotfiles</b>
 </p>
+
 ****
+
 ##### IF YOU'RE HERE FOR NVIM AND EWW CONFIG [THERE YA GO](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)
 
 # SETTING UP NIXOS , MY WAY
