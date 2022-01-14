@@ -11,7 +11,7 @@
 
 # SETTING UP NIXOS , MY WAY
 [![NixOS Unstable](https://img.shields.io/badge/NixOS-unstable-blue.svg?style=flat-square&logo=NixOS&logoColor=white)](https://nixos.org)
-[![Idempotent Dots](https://img.shields.io/github/last-commit/sam1431/IdempotentDots)](https://github.com/Sam1431/IdempotentDots)
+[![Idempotent Dots](https://img.shields.io/github/last-commit/sam1431/IdempotentDots?style=flat-square)](https://github.com/Sam1431/IdempotentDots)
 
 NixOS with tmpfs (Sway WM)
 
