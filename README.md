@@ -12,7 +12,6 @@
 </div>
 
 <div align="center">
-
 [![NixOS Unstable](https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&logo=NixOS&logoColor=white)](https://nixos.org)
 <a href="https://github.com/Sam1431/IdempotentDots"
         ><img
@@ -36,7 +35,8 @@
 > private configuration and an ongoing experiment while I feel out NixOS. I make
 > no guarantees that it will work out of the box for anyone but myself. It may
 > also change drastically and without warning. 
-
+*****
+    
 <img src="/home/.config/win.png" width="100%" />
 
 <p align="center">
