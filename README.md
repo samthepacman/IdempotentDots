@@ -5,9 +5,11 @@
     <b> λ Idempotent Dotfiles</b>
 </p>
 
-****
-
+*****
+<p align="center"
 # SETTING UP NIXOS , MY WAY
+</p>
+
   [![NixOS Unstable](https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&logo=NixOS&logoColor=white)](https://nixos.org)
   [![Idempotent Dots](https://img.shields.io/github/last-commit/sam1431/IdempotentDots?style=for-the-badge)](https://github.com/Sam1431/IdempotentDots)
   [![Repo](https://img.shields.io/github/repo-size/sam1431/IdempotentDots?label=repo&style=for-the-badge)](https://github.com/Sam1431/IdempotentDots)
