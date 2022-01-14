@@ -31,6 +31,7 @@ NixOS with tmpfs (Sway WM)
 <p align="center">
     [NVIM AND EWW CONFIG](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)
 </p>
+
 ------
 
 | | |
