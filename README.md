@@ -6,7 +6,6 @@
 </p>
 
 ****
-##### [NVIM AND EWW CONFIG](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)
 
 # SETTING UP NIXOS , MY WAY
 [![NixOS Unstable](https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&logo=NixOS&logoColor=white)](https://nixos.org)
@@ -29,6 +28,9 @@ NixOS with tmpfs (Sway WM)
 <span><img src="/home/.config/eww.png" height="178" /></span>
 </p>
 
+<p align="center">
+    ##### [NVIM AND EWW CONFIG](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)
+</p>
 ------
 
 | | |
