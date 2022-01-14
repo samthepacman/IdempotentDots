@@ -1,4 +1,4 @@
-<img src="/home/.config/idempotent.png" width="100%" />
+<img src="/home/.config/idempotent.png" width="30%" />
 ##### IF YOU'RE HERE FOR NVIM AND EWW CONFIG [THERE YA GO](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)
 
 
