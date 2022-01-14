@@ -1,7 +1,7 @@
 <p align="center">
 <img src="/home/.config/idempotent.png" width="30%" />
-##### IF YOU'RE HERE FOR NVIM AND EWW CONFIG [THERE YA GO](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)
 </p>
+##### IF YOU'RE HERE FOR NVIM AND EWW CONFIG [THERE YA GO](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)
 
 # SETTING UP NIXOS , MY WAY
 [![NixOS Unstable](https://img.shields.io/badge/NixOS-unstable-blue.svg?style=flat-square&logo=NixOS&logoColor=white)](https://nixos.org)
