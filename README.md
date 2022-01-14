@@ -7,7 +7,7 @@
 
 *****
 <p align="center"
- <b><font size="12"> SETTING UP NIXOS , MY WAY </font></b>
+ <b><font-size="12"> SETTING UP NIXOS , MY WAY </font></b>
 </p>
 
   [![NixOS Unstable](https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&logo=NixOS&logoColor=white)](https://nixos.org)
