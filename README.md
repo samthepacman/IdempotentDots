@@ -5,7 +5,6 @@
     <b> λ Idempotent Dotfiles</b>
 </p>
 
-*****
 <p align="center">
  <b><font-size="12"> SETTING UP NIXOS , MY WAY </font></b>
 </p>
@@ -28,8 +27,10 @@
 [![Last Commit](https://img.shields.io/github/last-commit/sam1431/IdempotentDots?style=for-the-badge)](https://github.com/Sam1431/IdempotentDots)
 
 </div>
-   
-NixOS with tmpfs (Sway WM)
+
+*****
+    
+**NixOS with tmpfs (Sway WM)**
 
 > **Disclaimer:** _This is not a community framework or distribution._ It's a
 > private configuration and an ongoing experiment while I feel out NixOS. I make
