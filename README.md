@@ -10,8 +10,8 @@
 </p>
 
 </div>
-
 <div align="center">
+
 [![NixOS Unstable](https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&logo=NixOS&logoColor=white)](https://nixos.org)
 <a href="https://github.com/Sam1431/IdempotentDots"
         ><img
@@ -22,10 +22,10 @@
         ><img
             src="https://img.shields.io/github/license/sam1431/Idempotentdots?style=for-the-badge"
             alt="License"
-       />
+    />
 [![Last Commit](https://img.shields.io/github/last-commit/sam1431/IdempotentDots?style=for-the-badge)](https://github.com/Sam1431/IdempotentDots)
-
 </div>
+  
 
 *****
     
