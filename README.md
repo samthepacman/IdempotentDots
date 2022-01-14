@@ -49,10 +49,10 @@ NixOS with tmpfs (Sway WM)
 # Lets Begin
 ## Flashing the Iso
 
--  - Acquire NixOS 21.11 or newer [here](https://nixos.org/download.html)
+1. - Acquire NixOS 21.11 or newer [here](https://nixos.org/download.html)
     -  Write it to a flash drive `dd if=<ur-iso>.iso of=/dev/sdXXX bs=4k status=progress `
 
--  - Boot into the installer.
+2.  - Boot into the installer.
     - ## Setting up tmpfs
  - for legacy 
  ```
@@ -117,14 +117,14 @@ mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
 mount -o bind /mnt/nix/persist/var/log /mnt/var/log
 
 ```
--  Now go ahead and do a  `nixos-generate-config --root /mnt`  to get a basic configuration for your system.
+4.  Now go ahead and do a  `nixos-generate-config --root /mnt`  to get a basic configuration for your system.
 
--  - `# git clone https://github.com/hlissner/dotfiles /mnt/etc/nixos/repo`
+5. - `# git clone https://github.com/hlissner/dotfiles /mnt/etc/nixos/repo`
    - ` # mv /mnt/etc/nixos/repo/nixos/* /mnt/etc/nixos/`
 
-- cofigure your host under /mnt/etc/nixos/hosts with config you obtained from **step 4** ( for a tmpfs layout check [this](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/modules/system/hardware.nix) out ). Also require the host file from [config.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config.nix)
+6.  cofigure your host under /mnt/etc/nixos/hosts with config you obtained from **step 4** ( for a tmpfs layout check [this](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/modules/system/hardware.nix) out ). Also require the host file from [config.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config.nix)
 
-- make flakes available to nixos - ` nix-shell -p git nixFlakes ranger neovim`
+7. make flakes available to nixos - ` nix-shell -p git nixFlakes ranger neovim`
 
 **NOTE**
 
@@ -136,7 +136,7 @@ mount -o bind /mnt/nix/persist/var/log /mnt/var/log
      users.users.root.initialHashedPassword = "the has you got from the above command";
 ```
 
-   #### Install nixOS
+8.  #### Install nixOS
     `# nixos-install --no-root-passwd --flake /mnt/etc/nixos`
 
 also shown [here](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/users/sam.nix)
