@@ -28,8 +28,6 @@ NixOS with tmpfs (Sway WM)
 <span><img src="/home/.config/eww.png" height="178" /></span>
 </p>
 
-**[NVIM AND EWW CONFIG](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)**
-
 ------
 ## System Default Apps
 
@@ -43,6 +41,8 @@ NixOS with tmpfs (Sway WM)
 | **Launcher:** | Wofi |
 | **Browser:** | Chromium |
 | **GTK Theme:** | Nordic |
+
+**[NVIM AND EWW CONFIG](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)**
 
 -----
 
