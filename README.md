@@ -206,7 +206,7 @@ by creating /home/sam under /nix/persist and giving the user read-write permissi
 # NOW TO THE DESKTOP PART
 
 - [~/.swayrc](https://github.com/Sam1431/IdempotentDots/blob/main/home/.swayrc) is the autostart script
-- it is also used the waybar theme from [here](https://github.com/Sam1431/IdempotentDots/tree/main/etc/nixos/home/modes)
+- it is also used to set the waybar theme from [here](https://github.com/Sam1431/IdempotentDots/tree/main/etc/nixos/home/modes)
 - ~/.config/nvim , ~/.config/eww ~/.swayrc ~/any-dir-to-store-ur-files-and-wall need to persistent for config to work
 - sway theme is declared at [/etc/nixos/config/themes/generic.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config/themes/generic.nix)
 - the main sway config is located at [/etc/nixos/config/sway/sway.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config/sway/sway.nix)
