@@ -12,7 +12,11 @@
 </div>
 <div align="center">
 
-[![NixOS Unstable](https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&logo=NixOS&logoColor=white)](https://nixos.org)
+<a href="https://nixos.org"
+        ><img
+            src="https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&logo=NixOS&logoColor=white"
+            alt="NixOS"
+    /></a>
 <a href="https://github.com/Sam1431/IdempotentDots/archive/refs/heads/main.zip"
         ><img
             src="https://img.shields.io/github/repo-size/sam1431/IdempotentDots?label=repo&style=for-the-badge"
