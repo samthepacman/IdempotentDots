@@ -37,7 +37,7 @@
 > also change drastically and without warning. 
 *****
     
-<img src="/../home/.config/win.png" width="100%" />
+<img src="https://github.com/Sam1431/IdempotentDots/blob/main/home/.config/win.png" width="100%" />
 
 <p align="center">
 <span><img src="https://github.com/Sam1431/IdempotentDots/blob/main/home/.config/ide.png" height="178" /></span>
