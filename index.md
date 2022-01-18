@@ -1,5 +1,5 @@
 <p align="center">
-<img src="/home/.config/idempotent.png" width="30%" />
+<img src="/../home/.config/idempotent.png" width="30%" />
 </p>
 <p align="center">
     <b> λ Idempotent Dotfiles</b>
@@ -37,12 +37,12 @@
 > also change drastically and without warning. 
 *****
     
-<img src="/home/.config/win.png" width="100%" />
+<img src="/../home/.config/win.png" width="100%" />
 
 <p align="center">
-<span><img src="/home/.config/ide.png" height="178" /></span>
-<span><img src="/home/.config/menu.png" height="178" /></span>
-<span><img src="/home/.config/eww.png" height="178" /></span>
+<span><img src="/../home/.config/ide.png" height="178" /></span>
+<span><img src="/../home/.config/menu.png" height="178" /></span>
+<span><img src="/../home/.config/eww.png" height="178" /></span>
 </p>
 
 ------
