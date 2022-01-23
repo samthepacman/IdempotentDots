@@ -45,6 +45,9 @@
 <span><img src="/home/.config/eww.png" height="178" /></span>
 </p>
 
+    
+    >> New theme based off of [MAUI SHELL](https://github.com/Nitrux/maui-shell)
+    
 ------
 ## System Default Apps
 
