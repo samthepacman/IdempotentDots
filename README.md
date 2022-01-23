@@ -46,7 +46,7 @@
 </p>
 
     
-    >> New theme based off of [MAUI SHELL](https://github.com/Nitrux/maui-shell)
+>> New theme based off of [MAUI SHELL](https://github.com/Nitrux/maui-shell)
     
 ------
 ## System Default Apps
