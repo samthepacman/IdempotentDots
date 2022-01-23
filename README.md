@@ -37,7 +37,7 @@
 > also change drastically and without warning. 
 *****
     
-<img src="/home/.config/win.png" width="100%" />
+<img src="/home/.config/sway.png" width="100%" />
 
 <p align="center">
 <span><img src="/home/.config/ide.png" height="178" /></span>
