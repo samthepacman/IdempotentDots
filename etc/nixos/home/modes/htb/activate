@@ -1,0 +1,2 @@
+waybar -c /etc/nixos/home/modes/htb/modules/config -s /etc/nixos/home/modes/htb/modules/style.css &
+

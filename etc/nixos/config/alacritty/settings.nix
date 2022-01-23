@@ -1,5 +1,5 @@
 let
-  clr = import ../themes/gruvbox.nix;
+  clr = import ../themes/one.nix;
 in
   {
     env = {
@@ -19,7 +19,7 @@ in
 #### FONTS ----------------
 
   font = {
-    size = 8.0;
+    size = 11.5;
     use_thin_strokes = true;
 
     normal = {

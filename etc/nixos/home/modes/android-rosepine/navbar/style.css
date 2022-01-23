@@ -1,0 +1,18 @@
+* {
+    border: 0px solid rgba(40, 44, 52, 0.0);
+    border-radius: 2px;
+    font-family: Iosevka Nerd Font, Font Awesome, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 4px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #191724;
+    border: transparent;
+    color: #e0def4;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 0;
+}
+

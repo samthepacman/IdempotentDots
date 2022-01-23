@@ -1,0 +1,37 @@
+stylesheet=/home/sam/.config/wofi/style.css
+# colors=/home/bryan/.config/waybar/material.css
+show=dmenu
+columns=1
+# height=200
+lines=12
+x=0
+y=120
+width=400
+term=alacritty
+location=top
+dynamic_lines=true
+allow_markup=false
+always_parse_args=true
+show_all=true
+print_command=true
+layer=top
+insensitive=true
+prompt=
+allow_images=false
+image_size=20
+content_align=start
+hide_scroll=true
+no_actions=true
+# display_generic=true
+valigh=center
+haligh=center
+orientation=vertical
+
+# Vi keybindings
+# key_forward=j
+# key_backward=k
+# key_submit=l
+# key_hide_search=q
+# key_pgup=Tabey_pgup=Tab
+# key_expand=Tab
+

@@ -1,0 +1,14 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 14, // Waybar height (to be removed for auto height)
+    "width": 1340, // Waybar wid
+    "modules-center": ["custom/toggle"],
+    "custom/toggle": {
+        "tooltip": false,
+        "format": "{icon} {}",
+        "format-icons": "███████████████████████████████████████████████████████████████",
+        // "format-icons": "██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████",
+        "on-click": "~/.config/eww/getDock" // Script in resources folder
+    },
+}

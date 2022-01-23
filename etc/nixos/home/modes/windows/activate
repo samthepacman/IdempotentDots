@@ -1,3 +1,0 @@
-# swaybg -m fill -i ~/.config/nixpkgs/modes/windows/dark.jpg &
-waybar -c ~/.config/nixpkgs/modes/windows/taskbar/config -s ~/.config/nixpkgs/modes/windows/taskbar/style.css &
-

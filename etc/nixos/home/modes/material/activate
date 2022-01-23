@@ -1,0 +1,2 @@
+waybar -c /etc/nixos/home/modes/material/modules/config -s /etc/nixos/home/modes/material/modules/style.css &
+

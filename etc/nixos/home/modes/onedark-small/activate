@@ -1,0 +1,2 @@
+waybar -c /etc/nixos/home/modes/onedark-small/modules/config -s /etc/nixos/home/modes/onedark-small/modules/style.css &
+

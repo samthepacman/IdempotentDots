@@ -1,4 +1,0 @@
-# swaybg -m fill -i ~/.config/nixpkgs/modes/pop-os/pop.png &
-waybar -c ~/.config/nixpkgs/modes/pop-os/gnome-status/config -s ~/.config/nixpkgs/modes/pop-os/gnome-status/style.css &
-waybar -c ~/.config/nixpkgs/modes/pop-os/dock/config-dock -s ~/.config/nixpkgs/modes/pop-os/dock/style-dock.css &
-

@@ -1,4 +1,0 @@
-# swaybg -m fill -i /etc/nixos/config/home/modes/gnome/gnome.jpg &
-waybar -c /etc/nixos/config/home/modes/gnome/gnome-status/config -s /etc/nixos/config/home/modes/gnome/gnome-status/style.css &
-waybar -c /etc/nixos/config/home/modes/gnome/dock/config-dock -s /etc/nixos/config/home/modes/gnome/dock/style-dock.css &
-

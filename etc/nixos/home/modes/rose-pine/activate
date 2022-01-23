@@ -1,0 +1,2 @@
+waybar -c /etc/nixos/home/modes/rose-pine/modules/config -s /etc/nixos/home/modes/rose-pine/modules/style.css &
+

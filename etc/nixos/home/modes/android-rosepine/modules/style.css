@@ -1,0 +1,251 @@
+* {
+    border: 0px solid rgba(40, 44, 52, 0.0);
+    border-radius: 2px 2px 2px 2px;
+    font-family: Iosevka Nerd Font, Font Awesome, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #191724;
+    border: transparent;
+    color: #e0def4;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 0;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+#workspaces button {
+    background-color: #26233a;
+    margin: 4px 2px 4px 2px;
+    padding: 0px 0px 0px 0px;
+    color: #e0def4;
+}
+
+#workspaces button:hover {
+    background: #26233a;
+}
+
+#workspaces button.focused {
+    background-color: #26233a;
+    color: #eb6f92;
+}
+
+#workspaces button {
+    background-color: #26233a;
+    color: #c5d1eb;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+    border: 3px solid #ffffff;
+}
+
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#custom-firefox,
+#pulseaudio,
+#window,
+#mpd {
+    padding: 2px 15px 2px 15px;
+    margin: 4px 2px 4px 2px;
+}
+
+#clock {
+    background-color: #26233a;
+    padding: 2px 15px 2px 15px;
+    margin: 4px 4px 4px 2px;
+    color: #ea9a97;
+}
+
+#custom-menu {
+    background-color: #26233a;
+    padding: 2px 3px 2px 10px;
+    margin: 4px 2px 4px 4px;
+    color: #9ccfd8;
+}
+
+#window { 
+    background-color: #26233a;
+    color: #458588;
+}
+
+#battery {
+    background-color: #26233a;
+    color: #000000;
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    background-color: #26233a;
+    color: #31748f;
+}
+
+#custom-firefox {
+    background-color: #f6c177;
+    color: #2e3440;
+}
+
+#memory {
+    background-color: #26233a;
+    color: #eb6f92;
+}
+
+#disk {
+    background-color: #26233a;
+    color: #f6c177;
+}
+
+#backlight {
+    background-color: #26233a;
+    color: #98c379;
+}
+
+#network {
+    background-color: #26233a;
+    color: #c678dd;
+}
+
+#network.disconnected {
+    background-color: #26233a;
+    color: #eb6f92;
+}
+
+#pulseaudio {
+    background-color: #26233a;
+    color: #f6c177;
+    margin: 4px 2px 4px 4px;
+}
+
+#pulseaudio.muted {
+    background-color: #26233a;
+    color: #f6c177;
+}
+
+#custom-media {
+    color: #9ccfd8;
+    background-color: #26233a;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+    background-color: #ffa000;
+}
+
+#temperature {
+    background-color: #f0932b;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#tray {
+    background-color: #191724;
+}
+
+#idle_inhibitor {
+    background-color: #26233a;
+    color: #4b5263;
+}
+
+#idle_inhibitor.activated {
+    background-color: #26233a;
+    color: #61afef;
+}
+
+#mpd {
+    background-color: #191724;
+    color: #b8bb26;
+}
+
+#mpd.disconnected {
+    background-color: #191724;
+}
+
+#mpd.stopped {
+    background-color: #191724;
+}
+
+#mpd.paused {
+    background-color: #98c379;
+}
+
+#language {
+    background: #191724;
+    color: #b8bb28;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+tooltip {
+  color: #c5d1eb;
+  background-color: #191724;
+  text-shadow: none;
+  border-radius: 4px 4px 4px 4px;
+}
+
+tooltip * {
+  color: #c5d1eb;
+  padding: 3px 3px;
+  text-shadow: none;
+}
+
+

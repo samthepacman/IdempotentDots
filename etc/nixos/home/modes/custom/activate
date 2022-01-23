@@ -1,2 +1,0 @@
-waybar -c /etc/nixos/home/modes/custom/modules/config -s /etc/nixos/home/modes/custom/modules/style.css &
-

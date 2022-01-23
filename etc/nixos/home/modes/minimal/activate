@@ -1,3 +1,0 @@
-# swaybg -m fill -i ~/.config/nixpkgs/modes/minimal/pop.png &
-waybar -c ~/.config/nixpkgs/modes/minimal/status-bar/config -s ~/.config/nixpkgs/modes/minimal/status-bar/style.css &
-

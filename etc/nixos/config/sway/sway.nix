@@ -22,7 +22,7 @@ in
 
        startup = [{ command = "mpd"; }
                   # { command = "foot --server"; }
-                  { command = "~/.swayrc"; }
+                  { command = "/home/sam/.swayrc"; }
                  ];
 
        bars = [{ command = "none"; }];
@@ -81,7 +81,7 @@ in
                   # DOUBLE KEY - BINDS
                   "${mod}+q" = "kill";
                   "${mod}+Return" = "exec wofi --show drun";
-                  "${mod}+p" = "exec sh ~/.config/wofer/wofer wofi --dmenu";
+                 # "${mod}+p" = "exec sh ~/.config/wofer/wofer wofi --dmenu";
                  # "${mod}+d" = "exec foot --app-id=file ranger";
                   "${mod}+d" = "exec ~/.config/eww/launch_eww";
                   "${mod}+Shift+d" = "exec pkill eww";
@@ -92,7 +92,8 @@ in
 
                   # TRIPLE KEY - BINDS
                   "${mod}+Shift+Return" = "exec footclient";
-                  "${mod}+Grave" = "exec kitty";
+                  "${mod}+Grave" = "exec ~/.config/eww/getDef";
+                  "${mod}+p" = "exec ~/.config/eww/getAll";
                   "${mod}+Control+Alt+l" = "exec swaylock -C ~/.config/nixpkgs/core/sway/recipes/swaylock/lock.conf";
 
                   # ARROW KEY RESIZE
@@ -116,22 +117,24 @@ in
 };
        modes = {
          open  = {
-                    # r = "exec wf-recorder";
-                    # x = "exec pkill wf-recorder";
+                    r = "exec notify-send 'screen is being recorded' && sleep 1 && wf-recorder";
+                    x = "exec pkill wf-recorder && notify-send 'screen recording stopped'";
                     f = "exec footclient --app-id=file ranger";
-                    b = "exec firefox";
+                    b = "exec chromium --enable-features=UseOzonePlatform --ozone-platform-hint=wayland";
                     q = "exec qutebrowser";
-                    m = "exec element-desktop";
+                    m = "exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland";
+                    d = "exec discord --enable-features=UseOzonePlatform --ozone-platform=wayland";
+                    s = "spotify";
                     t = "exec kitty";
                     n = "exec connman-gtk --no-icon";
                     Escape = "mode default";
                   };
 
          resize  = {
-                  h = "resize shrink width 50 px";
-                  j = "resize grow height 50 px";
-                  k = "resize shrink height 50 px";
-                  l = "resize grow width 50 px";
+                  h = "resize shrink width 75 px";
+                  j = "resize grow height 75 px";
+                  k = "resize shrink height 75 px";
+                  l = "resize grow width 75 px";
                   Escape = "mode default";
                   };
                 };

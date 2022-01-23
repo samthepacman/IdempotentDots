@@ -7,7 +7,7 @@
   selected.bgd = "#609ce0";
   selected.bor = "#609ce0";
   selected.txt = "#3a3a3a";
-  selected.ind = "#E95379";
+  selected.ind = "#c678dd";
   selected.cbr = "#61afef";
   #selected.cbr = "#F09383";
 

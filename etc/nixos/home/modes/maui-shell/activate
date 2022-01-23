@@ -1,0 +1,3 @@
+waybar -c /etc/nixos/home/modes/maui-shell/modules/config -s /etc/nixos/home/modes/maui-shell/modules/style.css &
+waybar -c /etc/nixos/home/modes/maui-shell/navbar/config -s /etc/nixos/home/modes/maui-shell/navbar/style.css &
+

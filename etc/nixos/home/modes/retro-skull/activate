@@ -1,4 +1,0 @@
-# swaybg -m fill -i ~/.config/nixpkgs/modes/retro-skull/skull.jpg &
-waybar -c ~/.config/nixpkgs/modes/retro-skull/gnome-status/config -s ~/.config/nixpkgs/modes/retro-skull/gnome-status/style.css &
-waybar -c ~/.config/nixpkgs/modes/retro-skull/dock/config-dock -s ~/.config/nixpkgs/modes/retro-skull/dock/style-dock.css &
-

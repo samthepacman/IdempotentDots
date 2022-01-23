@@ -1,0 +1,13 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 16, // Waybar height (to be removed for auto height)
+    "width": 1340, // Waybar wid
+    "modules-center": ["custom/toggle"],
+    "custom/toggle": {
+        "tooltip": false,
+        "format": "{icon} {}",
+        "format-icons": "██████████████████████████████████████████████████████████████████████████████████████████",
+        "on-click": "~/.config/eww/launch_eww" // Script in resources folder
+    },
+}

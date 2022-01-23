@@ -1,0 +1,266 @@
+* {
+    border-bottom: 4px solid rgba(40, 44, 52, 0.0);
+    border-radius: 2px;
+    font-family: Iosevka Nerd Font, Font Awesome, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    border: transparent;
+    color: #bbc2cf;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 0;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+#workspaces button {
+    padding: 5px 5px;
+    margin: 0px 2px;
+    background-color: #282c34;
+    color: #c5d1eb;
+}
+
+#workspaces button:hover {
+    background: #282c34;
+}
+
+#workspaces button.focused {
+    background-color: #282c34;
+    color: #e06c75;
+}
+
+#workspaces button {
+    background-color: #282c34;
+    color: #c5d1eb;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+    border: 3px solid #ffffff;
+}
+
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#custom-firefox,
+#pulseaudio,
+#window,
+#mpd {
+    padding: 0 10px;
+    margin: 4px 2px 4px 2px;
+}
+
+#custom-menu {	
+    padding: 0px 10px 0px 16px;
+    margin: 4px 2px 4px 4px;
+    font-size: 18px;
+}
+
+#clock {
+    padding: 0 10px;
+    margin: 4px 4px 4px 2px;
+}
+
+#workspaces {
+    margin: 4px 0px 4px 0px;
+}
+
+/* #workspaces {
+    margin: 4px 4px 4px 0px;
+    padding: 0px 4px;
+}
+*/
+
+#clock {
+    background-color: #282c34;
+    color: #56b6c2;
+}
+
+#custom-menu {
+    background-color: #282c34;
+    color: #56b6c2;
+}
+
+#window { 
+    background-color: #282c34;
+    color: #458588;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    background-color: #282c34;
+    color: #61afef;
+}
+
+#custom-firefox {
+    background-color: #e5c07b;
+    color: #2e3440;
+}
+
+#memory {
+    background-color: #282c34;
+    color: #e06c75;
+}
+
+#disk {
+    background-color: #282c34;
+    color: #e5c07b;
+}
+
+#backlight {
+    background-color: #282c34;
+    color: #98c379;
+}
+
+#network {
+    background-color: #282c34;
+    color: #c678dd;
+}
+
+#network.disconnected {
+    background-color: #282c34;
+    color: #e06c75;
+}
+
+#pulseaudio {
+    background-color: #282c34;
+    color: #e5c07b;
+}
+
+#pulseaudio.muted {
+    background-color: #282c34;
+    color: #e5c07b;
+}
+
+#custom-media {
+    color: #66cc99;
+    background-color: #282c34;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+    background-color: #ffa000;
+}
+
+#temperature {
+    background-color: #f0932b;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#tray {
+    background-color: #282c34;
+}
+
+#idle_inhibitor {
+    background-color: #282c34;
+    color: #4b5263;
+}
+
+#idle_inhibitor.activated {
+    background-color: #282c34;
+    color: #61afef;
+}
+
+#mpd {
+    background-color: #282c34;
+    color: #b8bb26;
+}
+
+#mpd.disconnected {
+    background-color: #282c34;
+}
+
+#mpd.stopped {
+    background-color: #282c34;
+}
+
+#mpd.paused {
+    background-color: #98c379;
+}
+
+#language {
+    background: #282c34;
+    color: #b8bb28;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+tooltip {
+  color: #c5d1eb;
+  background-color: #282c34;
+  text-shadow: none;
+  border-radius: 4px 4px 4px 4px;
+}
+
+tooltip * {
+  color: #c5d1eb;
+  padding: 3px 3px;
+  text-shadow: none;
+}
+
+

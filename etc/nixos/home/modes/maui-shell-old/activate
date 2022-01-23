@@ -1,0 +1,2 @@
+waybar -c /etc/nixos/home/modes/maui-shell/modules/config -s /etc/nixos/home/modes/onedark/modules/style.css &
+

@@ -10,4 +10,5 @@
  display.gdm = import ./desktop/gdm.nix;
  hardware = import ./system/hardware.nix;
  network = import ./system/network.nix;
+ optimize = import ./optimizations/optimize.nix;
 }

@@ -1,0 +1,32 @@
+* {
+    border: 0px solid rgba(40, 44, 52, 0.0);
+    border-radius: 2px;
+    font-family: Iosevka Nerd Font, Font Awesome, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 4px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #1d2026;
+    border: transparent;
+    color: #abb2bf;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 0;
+}
+
+tooltip {
+  color: #c5d1eb;
+  background-color: #282c34;
+  text-shadow: none;
+  border-radius: 4px 4px 4px 4px;
+}
+
+tooltip * {
+  color: #c5d1eb;
+  padding: 3px 3px;
+  text-shadow: none;
+}
+
+

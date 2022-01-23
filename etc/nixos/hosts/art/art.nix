@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  nixos = import ../../modules/variables.nix;
+  nixos = import ../modules/variables.nix;
 in
 {
   imports = [
@@ -15,7 +15,7 @@ in
       nixos.desktop.sway
       nixos.hardware
       nixos.network
-
+      nixos.optimize
     ];
 
 ## INTERNATIONALISATION

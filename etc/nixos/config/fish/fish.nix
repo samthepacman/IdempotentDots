@@ -6,23 +6,6 @@
     enableFishIntegration = true;
   };
 
-  programs.starship = {
-    enable = true;
-    enableFishIntegration = true;
-    settings = {
-    format = lib.concatStrings [ 
-       "$directory"
-       "$package"
-       "$character"
-       ];
-    add_newline = true;
-    character = {
-       success_symbol = "[λ](green)";
-       error_symbol = "[λ](red)";
-       };
-     };
-  };
-
   programs.fish = { 
     enable = true;
     shellInit = ''
