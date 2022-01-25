@@ -157,7 +157,7 @@ mount -o bind /mnt/nix/persist/var/log /mnt/var/log
 ```
 
 8.  #### Install nixOS
-    `# nixos-install --no-root-passwd --flake /mnt/etc/nixos`
+    `# nixos-install --no-root-passwd --flake /mnt/etc/nixos --impure`
 
 also shown [here](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/users/sam.nix)
 
