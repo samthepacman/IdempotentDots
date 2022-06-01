@@ -1,3 +1,5 @@
+# RENOVATION HAPPENING ( SOON TO BE DEFAULTED TO XMONAD , this repo will be backed to nixos-sway )
+
 <p align="center">
 <img src="/home/.config/idempotent.png" width="30%" />
 </p>
@@ -213,3 +215,6 @@ by creating /home/sam under /nix/persist and giving the user read-write permissi
 - ~/.config/nvim , ~/.config/eww ~/.swayrc ~/any-dir-to-store-ur-files-and-wall need to persistent for config to work
 - sway theme is declared at [/etc/nixos/config/themes/generic.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config/themes/generic.nix)
 - the main sway config is located at [/etc/nixos/config/sway/sway.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config/sway/sway.nix)
+
+    
+    
