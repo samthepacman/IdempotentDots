@@ -1,5 +1,3 @@
-# RENOVATION HAPPENING ( SOON TO BE DEFAULTED TO XMONAD , this repo will be backed to nixos-sway )
-
 <p align="center">
 <img src="/home/.config/idempotent.png" width="30%" />
 </p>
