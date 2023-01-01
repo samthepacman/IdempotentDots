@@ -139,7 +139,7 @@ mount -o bind /mnt/nix/persist/var/log /mnt/var/log
 ```
 4.  Now go ahead and do a  `nixos-generate-config --root /mnt`  to get a basic configuration for your system.
 
-5. - `# git clone https://github.com/hlissner/dotfiles /mnt/etc/nixos/repo`
+5. - `# git clone https://github.com/sam1431/idempotentdots /mnt/etc/nixos/repo`
    - ` # mv /mnt/etc/nixos/repo/nixos/* /mnt/etc/nixos/`
 
 6.  cofigure your host under /mnt/etc/nixos/hosts with config you obtained from **step 4** ( for a tmpfs layout check [this](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/modules/system/hardware.nix) out ). Also require the host file from [config.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config.nix)
