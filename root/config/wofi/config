@@ -1,0 +1,36 @@
+stylesheet=/home/sam/.config/wofi/style.css
+show=dmenu
+# columns=1
+# height=200
+lines=1
+x=470
+y=994
+width=1000
+term=kitty -e
+location=1
+dynamic_lines=true
+allow_markup=false
+always_parse_args=true
+show_all=true
+print_command=true
+layer=top
+insensitive=true
+prompt=>_
+allow_images=false
+image_size=20
+content_align=start
+hide_scroll=true
+no_actions=true
+# display_generic=true
+valigh=center
+haligh=center
+orientation=horizontal
+
+# Vi keybindings
+# key_forward=j
+# key_backward=k
+# key_submit=l
+# key_hide_search=q
+# key_pgup=Tabey_pgup=Tab
+# key_expand=Tab
+
