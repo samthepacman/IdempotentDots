@@ -58,14 +58,14 @@
 | **Browser:** | Chromium |
 | **GTK Theme:** | Nordic |
 
-**[NVIM AND EWW CONFIG](https://github.com/Sam1431/IdempotentDots/tree/main/home/.config)**
+**[NVIM CONFIG](https://github.com/samthepacman/IdempotentDots/tree/main/root/config/neovim)**
 
 -----
 
 # Lets Begin
 ## Flashing the Iso
 
-1. - Acquire NixOS 21.11 or newer [here](https://nixos.org/download.html)
+1. - Acquire NixOS 22.11 or newer [here](https://nixos.org/download.html)
     -  Write it to a flash drive `dd if=<ur-iso>.iso of=/dev/sdXXX bs=4k status=progress `
 
 2.  - Boot into the installer.
@@ -119,26 +119,28 @@ mkfs.ext4 $DISK-part2
 mount -t tmpfs none /mnt
 
 # Create directories
-mkdir -p /mnt/{boot,nix,etc/nixos,var/log}
+mkdir -p /mnt/{boot,nix,etc/nixos,var/log,etc/NetworkManager}
 
 # Mount /boot and /nix
 mount $DISK-part1 /mnt/boot
 mount $DISK-part2 /mnt/nix
 
 # Create a directory for persistent directories
-mkdir -p /mnt/nix/persist/{etc/nixos,var/log}
+mkdir -p /mnt/nix/persist/{etc/nixos,var/log,etc/NetworkManager}
 
 # Bind mount the persistent configuration / logs
 mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
 mount -o bind /mnt/nix/persist/var/log /mnt/var/log
+mount -o bind /mnt/nix/persist/etc/NetworkManager /mnt/etc/Networkmanager
+
 
 ```
 4.  Now go ahead and do a  `nixos-generate-config --root /mnt`  to get a basic configuration for your system.
 
 5. - `# git clone https://github.com/sam1431/idempotentdots /mnt/etc/nixos/repo`
-   - ` # mv /mnt/etc/nixos/repo/nixos/* /mnt/etc/nixos/`
+   - `# mv /mnt/etc/nixos/repo/root/* /mnt/etc/nixos/`
 
-6.  cofigure your host under /mnt/etc/nixos/hosts with config you obtained from **step 4** ( for a tmpfs layout check [this](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/modules/system/hardware.nix) out ). Also require the host file from [config.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config.nix)
+6.  Cofigure your host under /mnt/etc/nixos/hosts with config you obtained from **step 4** ( for a tmpfs layout check [this](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/modules/system/hardware.nix) out ). Also require the host file from [config.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config.nix)
 
 7. make flakes available to nixos - ` nix-shell -p git nixFlakes ranger neovim`
 
