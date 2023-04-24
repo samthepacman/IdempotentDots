@@ -151,13 +151,14 @@ mount -o bind /mnt/nix/persist/etc/NetworkManager /mnt/etc/Networkmanager
 ``` config 
      users.mutableUsers = false;
      # $ nix-shell --run 'mkpasswd -m SHA-512 -s' -p mkpasswd
-     users.users.root.initialHashedPassword = "the has you got from the above command";
+     users.users.root.initialHashedPassword = "the has you got from the above command"
 ```
+also shown [here](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/users/sam.nix)
+
 
 8.  #### Install nixOS
     `# nixos-install --no-root-passwd --flake /mnt/etc/nixos --impure`
 
-also shown [here](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/users/sam.nix)
 
 - Then reboot
 
