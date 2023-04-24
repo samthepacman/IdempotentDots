@@ -1,8 +1,11 @@
 <p align="center">
+ <b><font-size="20">BIJUTSU</font></b>
+</p>
+
+<p align="center">
 <img src="asset-img3.png" width="30%" />
 </p>
 <p align="center">
-    <b> BIJUTSU <b><br>
     <b> λ Idempotent Dotfiles</b>
 </p>
 
