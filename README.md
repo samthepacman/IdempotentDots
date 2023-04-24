@@ -1,5 +1,5 @@
 <p align="center">
-<img src="asset-img2.jpg" width="30%" />
+<img src="asset-img3.png" width="30%" />
 </p>
 <p align="center">
     <b> BIJUTSU <b><br>
