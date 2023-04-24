@@ -1,5 +1,5 @@
 <p align="center">
- <b><font-size="20">BIJUTSU</font></b>
+ <b><font-size="40">BIJUTSU</font></b>
 </p>
 
 <p align="center">
