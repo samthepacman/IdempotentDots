@@ -51,11 +51,11 @@
 |-|-|
 | **Shell:** | Zsh + Starship |
 | **DM:** | GreetD (tuigreet) |
-| **WM:** | Sway + Waybar + Eww |
+| **WM:** | Sway + Waybar |
 | **Editor:** | Neovim|
-| **Terminal:** | Foot (client-daemon mode) |
+| **Terminal:** | Alacritty / Kitty / Foot |
 | **Launcher:** | Wofi |
-| **Browser:** | Chromium |
+| **Browser:** | Firefox |
 | **GTK Theme:** | Nordic |
 
 **[NVIM CONFIG](https://github.com/samthepacman/IdempotentDots/tree/main/root/config/neovim)**
