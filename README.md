@@ -2,6 +2,7 @@
 <img src="/home/.config/idempotent.png" width="30%" />
 </p>
 <p align="center">
+    <b> BIJUTSU <b>
     <b> λ Idempotent Dotfiles</b>
 </p>
 
