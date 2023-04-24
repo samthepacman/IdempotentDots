@@ -214,3 +214,4 @@ by creating /home/sam under /nix/persist and giving the user read-write permissi
 + [home-manager](https://github.com/nix-community/home-manager)
 + [flakes](https://nixos.wiki/wiki/Flakes)
 + [eww config modified from](https://github.com/johnsci911/eww.widgets)
++ [NixOS - Erase your darlings](https://grahamc.com/blog/erase-your-darlings/)
