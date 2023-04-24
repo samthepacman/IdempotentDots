@@ -184,6 +184,19 @@ Usage: znx [flags]
    garbage-collect -d / gcd - clean nix store root
    
 ```
+-----
+
+# NOW TO THE DESKTOP PART
+
+- [~/.swayrc](https://github.com/Sam1431/IdempotentDots/blob/main/home/.swayrc) is the autostart script
+- it is also used to set the waybar theme from [here](https://github.com/Sam1431/IdempotentDots/tree/main/etc/nixos/home/modes)
+- ~/.config/nvim , ~/.config/eww ~/.swayrc ~/any-dir-to-store-ur-files-and-wall need to persistent for config to work
+- sway theme is declared at [/etc/nixos/config/themes/generic.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config/themes/generic.nix)
+- the main sway config is located at [/etc/nixos/config/sway/sway.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config/sway/sway.nix)
+
+**PS** neovim config doesn't work properly but will be fixed soon
+
+-----
 
 + **Why tmpfs?**
  because I have something similar to a [OCD for perfection](https://www.treatmyocd.com/blog/just-right-perfectionism-ocd) and I want my system to be as clean as possible
@@ -199,19 +212,3 @@ by creating /home/sam under /nix/persist and giving the user read-write permissi
 + [home-manager](https://github.com/nix-community/home-manager)
 + [flakes](https://nixos.wiki/wiki/Flakes)
 + [eww config modified from](https://github.com/johnsci911/eww.widgets)
-
-
-**PS** neovim config doesn't work properly but will be fixed soon
-
------
-
-# NOW TO THE DESKTOP PART
-
-- [~/.swayrc](https://github.com/Sam1431/IdempotentDots/blob/main/home/.swayrc) is the autostart script
-- it is also used to set the waybar theme from [here](https://github.com/Sam1431/IdempotentDots/tree/main/etc/nixos/home/modes)
-- ~/.config/nvim , ~/.config/eww ~/.swayrc ~/any-dir-to-store-ur-files-and-wall need to persistent for config to work
-- sway theme is declared at [/etc/nixos/config/themes/generic.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config/themes/generic.nix)
-- the main sway config is located at [/etc/nixos/config/sway/sway.nix](https://github.com/Sam1431/IdempotentDots/blob/main/etc/nixos/config/sway/sway.nix)
-
-    
-    
