@@ -37,10 +37,7 @@
 > also change drastically and without warning. 
 *****
     
-<img src="asset-img1.jpg" width="100%" />
-    
->> New theme based off of [MAUI SHELL](https://github.com/Nitrux/maui-shell)
-    
+<img src="asset-img1.jpg" width="100%" />    
 ------
 ## System Default Apps
 
