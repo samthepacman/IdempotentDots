@@ -37,14 +37,7 @@
 > also change drastically and without warning. 
 *****
     
-<img src="/home/.config/sway.png" width="100%" />
-
-<p align="center">
-<span><img src="/home/.config/ide.png" height="178" /></span>
-<span><img src="/home/.config/menu.png" height="178" /></span>
-<span><img src="/home/.config/eww.png" height="178" /></span>
-</p>
-
+<img src="asset-img1.jpg" width="100%" />
     
 >> New theme based off of [MAUI SHELL](https://github.com/Nitrux/maui-shell)
     
