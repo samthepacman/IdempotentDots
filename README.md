@@ -6,7 +6,7 @@
 <img src="asset-img3.png" width="30%" />
 </p>
 <p align="center">
-    <b> λ Idempotent Dotfiles</b>
+    <b> λ Purely Stateless </b>
 </p>
 
 <p align="center">
