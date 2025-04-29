@@ -35,17 +35,17 @@
     
 **NixOS with tmpfs (Sway WM)**
 
-> **Disclaimer:** _This is not a community framework or distribution._ It's a
-> private configuration and an ongoing experiment while I feel out NixOS. I make
-> no guarantees that it will work out of the box for anyone but myself. It may
-> also change drastically and without warning. 
+> **Disclaimer:** _This is not a community framework or distribution._
+> It's an ongoing experiment I'm trying with NixOS. I make
+> no guarantees that it will work out of the box for anyone. It may
+> also change drastically as time goes on.
 *****
     
 <img src="asset-img1.jpg" width="100%" />    
 
 -----
 
-## System Default Apps
+## System Defaults
 
 | | |
 |-|-|
@@ -53,7 +53,7 @@
 | **DM:** | GreetD (tuigreet) |
 | **WM:** | Sway + Waybar |
 | **Editor:** | Neovim|
-| **Terminal:** | Alacritty / Kitty / Foot |
+| **Terminal:** | Alacritty / Kitty |
 | **Launcher:** | Wofi |
 | **Browser:** | Firefox |
 | **GTK Theme:** | Nordic |
